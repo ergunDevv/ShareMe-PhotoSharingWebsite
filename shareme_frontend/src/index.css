@@ -6,4 +6,6 @@
 .hide-scrollbar::-webkit-scrollbar{
     display: none;
 }
-
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;}

@@ -18,9 +18,10 @@ function Login() {
     const decoded=jwt_decode(response.credential);
     
     localStorage.setItem("user", JSON.stringify(decoded));
-    const { name, aud, picture } = decoded;
+    const { name, sub, picture } = decoded;
+    console.log(sub)
     const doc = {
-      _id: aud,
+      _id: sub,
       _type: "user",
       userName: name,
       image: picture,

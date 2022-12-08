@@ -18,7 +18,7 @@ const Pin = ({ pin }) => {
     const { postedBy, image, _id, destination ,save} = pin;
   
     const user = fetchUser();
-  
+    console.log(user)
     const deletePin = (id) => {
       client
         .delete(id)

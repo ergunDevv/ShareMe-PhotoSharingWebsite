@@ -18,7 +18,7 @@ const Pin = ({ pin }) => {
     const { postedBy, image, _id, destination ,save} = pin;
   
     const user = fetchUser();
-    console.log(user)
+
     const deletePin = (id) => {
       client
         .delete(id)
@@ -110,7 +110,7 @@ const Pin = ({ pin }) => {
                   >
                     {' '}
                     <BsFillArrowUpRightCircleFill />
-                    {destination?.slice(8, 17)}...
+                    {destination?.length>15? `${destination.slice(0,15)}...`:destination}
                   </a>
                 ) : undefined}
                 {
